@@ -159,7 +159,7 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case 5:
             self.showViewController(viewController: UINavigationController.self, storyboardId: "SettingsNavID")
         case 6:
-            let safariVC = SFSafariViewController(url: URL(string: "https://www.facebook.com/johncodeos")!)
+            let safariVC = SFSafariViewController(url: URL(string: "https://instagram.com/polina.malina.tattoo?igshid=YmMyMTA2M2Y=")!)
             present(safariVC, animated: true)
         default:
             break
