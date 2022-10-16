@@ -18,7 +18,7 @@ class PriceViewController: UIViewController {
     ]
 
     var stockDictionary: [String : String] = [
-        "Скидка имениннеку 20%":"Скидка действительна 3 дня до дня рождения и 3 дня после, при предъявлении оригинала документа, удостоверяющего личность. Скидка не распространяется на другие акции.",
+        "Скидка имениннику 20%":"Скидка действительна 3 дня до дня рождения и 3 дня после, при предъявлении оригинала документа, удостоверяющего личность. Скидка не распространяется на другие акции.",
         "Две и более мини-тату со скидкой 30%": "Скидка предоставляется при оформлении записи на 2 и более мини-тату за один сейчас.",
         "Скидка для подружек": "Приведи подругу и получу скидку на следующую татуировку/перманент/коррекцию 15%."
     ]
@@ -63,6 +63,11 @@ class PriceViewController: UIViewController {
 //        }
     }
     
+//    func loadCellPrice() {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as! PriceCell
+//
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.revealViewController()?.gestureEnabled = false
@@ -82,9 +87,9 @@ extension PriceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as! PriceCell
+//        cell.nameOfServiceLabel = priceDictionary.keys[indexPath.row]
         
-        //swith for table?
         
         return cell
     }

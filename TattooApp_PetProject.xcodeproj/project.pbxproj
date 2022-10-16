@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C76943936A10013583066206 /* Pods_TattooApp_PetProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */; };
 		CE5F0A8828F68F0A0068DC2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0A8728F68F0A0068DC2D /* AppDelegate.swift */; };
 		CE5F0A8A28F68F0A0068DC2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0A8928F68F0A0068DC2D /* SceneDelegate.swift */; };
 		CE5F0A8F28F68F0A0068DC2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5F0A8D28F68F0A0068DC2D /* Main.storyboard */; };
@@ -30,9 +31,15 @@
 		CE86521F28F8240A0054CF5E /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86521D28F8240A0054CF5E /* StockCell.swift */; };
 		CE86522028F8240A0054CF5E /* StockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE86521E28F8240A0054CF5E /* StockCell.xib */; };
 		CE9BDAB228F6C7A9006338B4 /* myWorksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BDAB128F6C7A9006338B4 /* myWorksModel.swift */; };
+		CEC5B3C128FC1469001B2D00 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C028FC1469001B2D00 /* Network.swift */; };
+		CEC5B3C328FC15B0001B2D00 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C228FC15B0001B2D00 /* NetworkDataFetcher.swift */; };
+		CEC5B3C528FC1654001B2D00 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C428FC1654001B2D00 /* DataModel.swift */; };
+		CEC5B3C828FC1822001B2D00 /* TattooIdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */; };
+		CEC5B3C928FC1822001B2D00 /* TattooIdeaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5B3C728FC1822001B2D00 /* TattooIdeaCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TattooApp_PetProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5F0A8428F68F0A0068DC2D /* TattooApp_PetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TattooApp_PetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5F0A8728F68F0A0068DC2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5F0A8928F68F0A0068DC2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +65,13 @@
 		CE86521D28F8240A0054CF5E /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		CE86521E28F8240A0054CF5E /* StockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockCell.xib; sourceTree = "<group>"; };
 		CE9BDAB128F6C7A9006338B4 /* myWorksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWorksModel.swift; sourceTree = "<group>"; };
+		CEC5B3C028FC1469001B2D00 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		CEC5B3C228FC15B0001B2D00 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		CEC5B3C428FC1654001B2D00 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooIdeaCell.swift; sourceTree = "<group>"; };
+		CEC5B3C728FC1822001B2D00 /* TattooIdeaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TattooIdeaCell.xib; sourceTree = "<group>"; };
+		CF0A8C67DA236E356596E61A /* Pods-TattooApp_PetProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattooApp_PetProject.debug.xcconfig"; path = "Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F14E0655BD8C9D6821EB283F /* Pods-TattooApp_PetProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattooApp_PetProject.release.xcconfig"; path = "Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +79,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76943936A10013583066206 /* Pods_TattooApp_PetProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94BCA93C00410253C9C593ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE5F0A7B28F68F0A0068DC2D = {
 			isa = PBXGroup;
 			children = (
 				CE5F0A8628F68F0A0068DC2D /* TattooApp_PetProject */,
 				CE5F0A8528F68F0A0068DC2D /* Products */,
+				D1F082697B4409A82815C24A /* Pods */,
+				94BCA93C00410253C9C593ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +115,7 @@
 		CE5F0A8628F68F0A0068DC2D /* TattooApp_PetProject */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5B3BF28FC1450001B2D00 /* Network */,
 				CE9BDAB328F6D52A006338B4 /* Application */,
 				CE5F0AA228F690C00068DC2D /* Cells */,
 				CE5F0A9D28F6903F0068DC2D /* Models */,
@@ -108,6 +134,7 @@
 				CE5F0A9E28F690580068DC2D /* SideMenuModel.swift */,
 				CE9BDAB128F6C7A9006338B4 /* myWorksModel.swift */,
 				CE86521728F822200054CF5E /* PriceModel.swift */,
+				CEC5B3C428FC1654001B2D00 /* DataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +149,8 @@
 				CE86521A28F823F80054CF5E /* PriceCell.xib */,
 				CE86521D28F8240A0054CF5E /* StockCell.swift */,
 				CE86521E28F8240A0054CF5E /* StockCell.xib */,
+				CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */,
+				CEC5B3C728FC1822001B2D00 /* TattooIdeaCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -150,6 +179,25 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		CEC5B3BF28FC1450001B2D00 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5B3C028FC1469001B2D00 /* Network.swift */,
+				CEC5B3C228FC15B0001B2D00 /* NetworkDataFetcher.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D1F082697B4409A82815C24A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF0A8C67DA236E356596E61A /* Pods-TattooApp_PetProject.debug.xcconfig */,
+				F14E0655BD8C9D6821EB283F /* Pods-TattooApp_PetProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5F0A9828F68F0B0068DC2D /* Build configuration list for PBXNativeTarget "TattooApp_PetProject" */;
 			buildPhases = (
+				410A8372506D0C6017A899DA /* [CP] Check Pods Manifest.lock */,
 				CE5F0A8028F68F0A0068DC2D /* Sources */,
 				CE5F0A8128F68F0A0068DC2D /* Frameworks */,
 				CE5F0A8228F68F0A0068DC2D /* Resources */,
+				45A16203EFBBBDD29AB5A45C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,6 +261,7 @@
 				CE5F0A9428F68F0B0068DC2D /* LaunchScreen.storyboard in Resources */,
 				CE5F0A9128F68F0B0068DC2D /* Assets.xcassets in Resources */,
 				CE86521C28F823F80054CF5E /* PriceCell.xib in Resources */,
+				CEC5B3C928FC1822001B2D00 /* TattooIdeaCell.xib in Resources */,
 				CE5F0A8F28F68F0A0068DC2D /* Main.storyboard in Resources */,
 				CE86522028F8240A0054CF5E /* StockCell.xib in Resources */,
 				CE5F0AA628F6912F0068DC2D /* SideMenuCell.xib in Resources */,
@@ -218,6 +269,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		410A8372506D0C6017A899DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TattooApp_PetProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45A16203EFBBBDD29AB5A45C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE5F0A8028F68F0A0068DC2D /* Sources */ = {
@@ -228,7 +321,9 @@
 				CE5F0A9C28F68FF20068DC2D /* MainViewController.swift in Sources */,
 				CE9BDAB228F6C7A9006338B4 /* myWorksModel.swift in Sources */,
 				CE5F0A9F28F690580068DC2D /* SideMenuModel.swift in Sources */,
+				CEC5B3C828FC1822001B2D00 /* TattooIdeaCell.swift in Sources */,
 				CE86521F28F8240A0054CF5E /* StockCell.swift in Sources */,
+				CEC5B3C528FC1654001B2D00 /* DataModel.swift in Sources */,
 				CE5F0A8828F68F0A0068DC2D /* AppDelegate.swift in Sources */,
 				CE5F0AAA28F691DE0068DC2D /* PriceViewController.swift in Sources */,
 				CE5F0AB428F6B7120068DC2D /* myWorksCell.swift in Sources */,
@@ -237,7 +332,9 @@
 				CE5F0A8A28F68F0A0068DC2D /* SceneDelegate.swift in Sources */,
 				CE5F0AA828F691BA0068DC2D /* HomeViewController.swift in Sources */,
 				CE5F0AA528F6912F0068DC2D /* SideMenuCell.swift in Sources */,
+				CEC5B3C328FC15B0001B2D00 /* NetworkDataFetcher.swift in Sources */,
 				CE5F0AAC28F691FD0068DC2D /* RecommendationViewController.swift in Sources */,
+				CEC5B3C128FC1469001B2D00 /* Network.swift in Sources */,
 				CE86521B28F823F80054CF5E /* PriceCell.swift in Sources */,
 				CE5F0AB228F692710068DC2D /* SettingsViewController.swift in Sources */,
 				CE86521828F822200054CF5E /* PriceModel.swift in Sources */,
@@ -384,6 +481,7 @@
 		};
 		CE5F0A9928F68F0B0068DC2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF0A8C67DA236E356596E61A /* Pods-TattooApp_PetProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -412,6 +510,7 @@
 		};
 		CE5F0A9A28F68F0B0068DC2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14E0655BD8C9D6821EB283F /* Pods-TattooApp_PetProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

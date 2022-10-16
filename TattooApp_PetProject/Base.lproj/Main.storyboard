@@ -427,7 +427,7 @@ Cg
         <!--Tattoo Ideas-->
         <scene sceneID="Xri-Hn-1m1">
             <objects>
-                <viewController storyboardIdentifier="ProfileModalID" id="Arh-nn-BJ6" customClass="TattooIdeasViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Arh-nn-BJ6" customClass="TattooIdeasViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9v-lo-hkx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,6 +461,7 @@ Cg
                         <barButtonItem key="leftBarButtonItem" title="Item" image="list.bullet" catalog="system" id="3fF-LG-Joh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="ACr-Br-yP3" id="bxI-cq-x3x"/>
                         <outlet property="sideMenuBtn" destination="3fF-LG-Joh" id="PTF-bA-iUW"/>
                     </connections>
                 </viewController>
@@ -574,38 +575,20 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccf-va-szp">
-                                <rect key="frame" x="20" y="20" width="374" height="123"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="123" id="LZS-SK-4ST"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh5-8b-nvQ">
-                                <rect key="frame" x="20" y="164" width="374" height="610"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="610" id="1m8-d6-BU1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-Up-DB1">
+                                <rect key="frame" x="104" y="41" width="206" height="32"/>
+                                <segments>
+                                    <segment title="До сеанса"/>
+                                    <segment title="После сеанса"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ezH-MS-fIg"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ccf-va-szp" firstAttribute="top" secondItem="ezH-MS-fIg" secondAttribute="top" constant="20" id="30y-FI-337"/>
-                            <constraint firstItem="ccf-va-szp" firstAttribute="trailing" secondItem="kh5-8b-nvQ" secondAttribute="trailing" id="5fU-dX-eoE"/>
-                            <constraint firstItem="kh5-8b-nvQ" firstAttribute="top" secondItem="ccf-va-szp" secondAttribute="bottom" constant="21" id="7t0-Er-nMn"/>
-                            <constraint firstItem="ccf-va-szp" firstAttribute="leading" secondItem="UnC-eY-5WL" secondAttribute="leadingMargin" id="GxO-3E-xe3"/>
-                            <constraint firstItem="kh5-8b-nvQ" firstAttribute="bottom" secondItem="ezH-MS-fIg" secondAttribute="bottom" id="Qm2-Wz-lYv"/>
-                            <constraint firstItem="ccf-va-szp" firstAttribute="trailing" secondItem="UnC-eY-5WL" secondAttribute="trailingMargin" id="TlQ-jP-mor"/>
-                            <constraint firstItem="kh5-8b-nvQ" firstAttribute="top" secondItem="ccf-va-szp" secondAttribute="bottom" constant="21" id="YbX-sJ-PYt"/>
-                            <constraint firstItem="ccf-va-szp" firstAttribute="leading" secondItem="kh5-8b-nvQ" secondAttribute="leading" id="b0D-Ky-aTK"/>
-                            <constraint firstItem="kh5-8b-nvQ" firstAttribute="leading" secondItem="ezH-MS-fIg" secondAttribute="leading" constant="20" id="ey6-3P-Pw1"/>
-                            <constraint firstItem="ezH-MS-fIg" firstAttribute="trailing" secondItem="kh5-8b-nvQ" secondAttribute="trailing" constant="20" id="xs7-gK-To3"/>
+                            <constraint firstItem="9fi-Up-DB1" firstAttribute="centerX" secondItem="UnC-eY-5WL" secondAttribute="centerX" id="MTc-XQ-0g6"/>
+                            <constraint firstItem="9fi-Up-DB1" firstAttribute="top" secondItem="ezH-MS-fIg" secondAttribute="top" constant="41" id="Rml-mZ-qXg"/>
+                            <constraint firstItem="9fi-Up-DB1" firstAttribute="leading" secondItem="ezH-MS-fIg" secondAttribute="leading" constant="104" id="k4o-wq-zNS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recommendations" id="dc5-3I-4ef">
