@@ -27,6 +27,7 @@ class TattooIdeasViewController: UIViewController {
         
         collectionView.register(TattooIdeaCell.self, forCellWithReuseIdentifier: "TattooIdeaCell")
         collectionView.delegate = self
+        collectionView.dataSource = self
         
         loadImage()
     }
@@ -61,5 +62,4 @@ extension TattooIdeasViewController: UICollectionViewDelegate, UICollectionViewD
         let spacing = CGFloat((countCells)) * offset / CGFloat(countCells)
         return CGSize(width: widthCell - spacing, height: heightCell - (offset * 2))
     }
-    
 }

@@ -12,6 +12,7 @@ class StockCell: UITableViewCell {
     @IBOutlet weak var descriptionStock: UILabel!
     @IBOutlet weak var nameStock: UILabel!
     
+    static let identifier = "StockCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

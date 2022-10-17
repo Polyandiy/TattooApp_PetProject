@@ -501,9 +501,10 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aGF-I4-wVp">
-                                <rect key="frame" x="147.5" y="50" width="119" height="31"/>
+                                <rect key="frame" x="122" y="50" width="170" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bHo-mo-gL0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="EEe-bN-cTr"/>
+                                    <constraint firstAttribute="height" constant="40" id="wfk-lP-vSe"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Цена"/>
@@ -514,7 +515,7 @@ Cg
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-y9-ByY">
-                                <rect key="frame" x="20" y="118" width="374" height="631"/>
+                                <rect key="frame" x="20" y="128" width="374" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -576,26 +577,44 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-Up-DB1">
-                                <rect key="frame" x="104" y="41" width="206" height="32"/>
+                                <rect key="frame" x="-5.5" y="41" width="425" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VhA-0o-ddq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vuN-Is-bBc"/>
+                                </constraints>
                                 <segments>
                                     <segment title="До сеанса"/>
                                     <segment title="После сеанса"/>
+                                    <segment title="Противопоказания"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeSegment:" destination="FWO-yd-Btf" eventType="valueChanged" id="zbP-MW-JOI"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8cm-9H-rul">
+                                <rect key="frame" x="20" y="126" width="374" height="628"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ezH-MS-fIg"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8cm-9H-rul" firstAttribute="leading" secondItem="ezH-MS-fIg" secondAttribute="leading" constant="20" id="DRX-wC-EcL"/>
+                            <constraint firstItem="ezH-MS-fIg" firstAttribute="trailing" secondItem="8cm-9H-rul" secondAttribute="trailing" constant="20" id="KQl-kL-8iP"/>
                             <constraint firstItem="9fi-Up-DB1" firstAttribute="centerX" secondItem="UnC-eY-5WL" secondAttribute="centerX" id="MTc-XQ-0g6"/>
                             <constraint firstItem="9fi-Up-DB1" firstAttribute="top" secondItem="ezH-MS-fIg" secondAttribute="top" constant="41" id="Rml-mZ-qXg"/>
-                            <constraint firstItem="9fi-Up-DB1" firstAttribute="leading" secondItem="ezH-MS-fIg" secondAttribute="leading" constant="104" id="k4o-wq-zNS"/>
+                            <constraint firstItem="9fi-Up-DB1" firstAttribute="centerX" secondItem="UnC-eY-5WL" secondAttribute="centerX" id="Zh1-IG-oRp"/>
+                            <constraint firstItem="8cm-9H-rul" firstAttribute="top" secondItem="9fi-Up-DB1" secondAttribute="bottom" constant="45" id="doL-Zn-zcw"/>
+                            <constraint firstItem="ezH-MS-fIg" firstAttribute="bottom" secondItem="8cm-9H-rul" secondAttribute="bottom" constant="20" id="wDl-BZ-Gd4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recommendations" id="dc5-3I-4ef">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="8Jv-w8-gjQ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="segmentControll" destination="9fi-Up-DB1" id="Ry3-az-7IJ"/>
                         <outlet property="sideMenuBtn" destination="8Jv-w8-gjQ" id="xwf-2b-PNZ"/>
+                        <outlet property="tableView" destination="8cm-9H-rul" id="s7b-b9-fBI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1l-7T-mvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

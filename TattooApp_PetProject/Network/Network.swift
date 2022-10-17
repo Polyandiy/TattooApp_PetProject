@@ -14,7 +14,6 @@ class Network {
         let url = self.url(params: parameters)
         
         var request = URLRequest(url: url)
-        //request.allHTTPHeaderFields = prepareHeader()
         request.httpMethod = "GET"
         
         let task = createDataTask(from: request, completion: complition)
@@ -35,7 +34,7 @@ class Network {
         components.scheme = "https"
         components.host = "serpapi.com"
         components.path = "/search.json"
-        components.queryItems = params.map { URLQueryItem(name: $0, value: $1 )}
+        components.queryItems = params.map { URLQueryItem(name: $0, value: $1)}
         return components.url!
     }
     

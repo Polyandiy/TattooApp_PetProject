@@ -23,22 +23,12 @@ class PriceViewController: UIViewController {
         "Скидка для подружек": "Приведи подругу и получу скидку на следующую татуировку/перманент/коррекцию 15%."
     ]
     
-    var dictToDisplay: [String : String] = [:]
-    var nibToUse = UITableViewCell.self
-    
     @IBOutlet var sideMenuBtn: UIBarButtonItem!
     @IBOutlet weak var segmentedController: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func segmentClick(_ sender: Any) {
-        switch segmentedController.selectedSegmentIndex {
-        case 0:
-            dictToDisplay = priceDictionary; nibToUse = PriceCell.self
-        case 1 :
-            dictToDisplay = stockDictionary; nibToUse = StockCell.self
-        default:
-            break
-        }
+    @IBAction func segmentClick(_ sender: UISegmentedControl) {
+        tableView.reloadData()
     }
     
     
@@ -51,22 +41,11 @@ class PriceViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
         
-        tableView.register(nibToUse, forCellReuseIdentifier: "identifier")
-//        switch segmentedController.selectedSegmentIndex {
-//        case 0:
-//            tableView.register(PriceCell.self, forCellReuseIdentifier: "PriceCell")
-//        case 1 :
-//            tableView.register(StockCell.self, forCellReuseIdentifier: "StockCell")
-//        default:
-//            break
-//        }
+        tableView.register(UINib(nibName: PriceCell.identifier, bundle: nil), forCellReuseIdentifier: PriceCell.identifier)
+        tableView.register(UINib(nibName: StockCell.identifier, bundle: nil), forCellReuseIdentifier: StockCell.identifier)
     }
-    
-//    func loadCellPrice() {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as! PriceCell
-//
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,22 +56,46 @@ class PriceViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.revealViewController()?.gestureEnabled = true
     }
+    
+
+    func loadCellPrice(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PriceCell.identifier, for: indexPath) as! PriceCell
+        cell.nameOfServiceLabel?.text = Array(priceDictionary.keys)[indexPath.row]
+        cell.priceLabel?.text = Array(priceDictionary.values)[indexPath.row]
+        return cell
+    }
+    
+    func loadCellStock(indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: StockCell.identifier, for: indexPath) as! StockCell
+        cell.nameStock?.text = Array(stockDictionary.keys)[indexPath.row]
+        cell.descriptionStock?.text = Array(stockDictionary.values)[indexPath.row]
+        return cell
+    }
 }
+
+//MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension PriceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dictToDisplay.count
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
+            return priceDictionary.count
+        case 1 :
+            return stockDictionary.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath) as! PriceCell
-//        cell.nameOfServiceLabel = priceDictionary.keys[indexPath.row]
-        
-        
-        return cell
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
+            return loadCellPrice(indexPath: indexPath)
+        case 1 :
+            return loadCellStock(indexPath: indexPath)
+        default:
+            return UITableViewCell()
+        }
     }
-    
-    
 }

@@ -38,42 +38,34 @@ class SideMenuViewController: UIViewController {
         super.viewDidLoad()
         logoLabel.image?.withTintColor(.white)
 
-        // TableView
         self.sideMenuTableView.delegate = self
         self.sideMenuTableView.dataSource = self
         self.sideMenuTableView.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
         self.sideMenuTableView.separatorStyle = .none
 
-        // Set Highlighted Cell
         DispatchQueue.main.async {
             let defaultRow = IndexPath(row: self.defaultHighlightedCell, section: 0)
             self.sideMenuTableView.selectRow(at: defaultRow, animated: false, scrollPosition: .none)
         }
 
-        // Footer
         self.footerLabel.textColor = UIColor.white
         self.footerLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         self.footerLabel.text = "Developed by Plyandiy"
 
-        // Register TableView Cell
         self.sideMenuTableView.register(SideMenuCell.nib, forCellReuseIdentifier: SideMenuCell.identifier)
 
-        // Update TableView with the data
         self.sideMenuTableView.reloadData()
     }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension SideMenuViewController: UITableViewDelegate {
+extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
-}
-
-// MARK: - UITableViewDataSource
-
-extension SideMenuViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.menu.count
     }

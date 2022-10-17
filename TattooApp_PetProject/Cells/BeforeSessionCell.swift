@@ -1,25 +1,26 @@
 //
-//  PriceCell.swift
+//  BeforeSessionCell.swift
 //  TattooApp_PetProject
 //
-//  Created by Поляндий on 13.10.2022.
+//  Created by Поляндий on 17.10.2022.
 //
 
 import UIKit
 
-class PriceCell: UITableViewCell {
+class BeforeSessionCell: UITableViewCell {
 
-    @IBOutlet weak var nameOfServiceLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    static let identifier = "BeforeSessionCell"
     
-    static let identifier = "PriceCell"
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.backgroundColor = .clear
-        self.nameOfServiceLabel.textColor = .white
-        self.priceLabel.textColor = .white
+        self.numberLabel.textColor = .white
+        self.descriptionLabel.textColor = .white
     }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,5 +28,5 @@ class PriceCell: UITableViewCell {
 //
 //        // Configure the view for the selected state
 //    }
-    
+//    
 }
