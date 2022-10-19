@@ -13,8 +13,8 @@ class PriceViewController: UIViewController {
     var priceDictionary: [String : String] = [
         "мини-тату": "2000-4000р",
         "перманент бровей" : "4500р",
-        "коррекция" : "50% от тату",
-        "коррекция пм бровей" : "2500"
+        "коррекция тату" : "50% от тату",
+        "коррекция пм бровей" : "2500р"
     ]
 
     var stockDictionary: [String : String] = [

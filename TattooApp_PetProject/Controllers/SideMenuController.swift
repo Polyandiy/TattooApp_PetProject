@@ -30,8 +30,8 @@ class SideMenuViewController: UIViewController {
         SideMenuModel(icon: UIImage(systemName: "hand.raised.slash.fill")!, title: "Recommendation"),
         SideMenuModel(icon: UIImage(systemName: "pencil.circle.fill")!, title: "Recording"),
         SideMenuModel(icon: UIImage(systemName: "lightbulb.fill")!, title: "Tatoo Ideas"),
-        SideMenuModel(icon: UIImage(systemName: "slider.horizontal.3")!, title: "Settings"),
-        SideMenuModel(icon: UIImage(systemName: "hand.thumbsup.fill")!, title: "Instagram")
+        SideMenuModel(icon: UIImage(systemName: "lock.iphone")!, title: "Settings"),
+        SideMenuModel(icon: UIImage(systemName: "ipodshuffle.gen4")!, title: "Instagram")
     ]
 
     override func viewDidLoad() {

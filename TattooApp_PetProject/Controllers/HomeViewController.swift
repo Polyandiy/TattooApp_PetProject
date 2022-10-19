@@ -14,6 +14,9 @@ struct MyCustomData{
 
 class HomeViewController: UIViewController {
     
+    let countCell = 3
+    let offset: CGFloat = 2.0
+    
     private var data = [
         MyCustomData(image: Image.imege1),
         MyCustomData(image: Image.imege2),
@@ -50,8 +53,6 @@ class HomeViewController: UIViewController {
         return collection
     }()
     
-    let countCell = 3
-    let offset: CGFloat = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +67,7 @@ class HomeViewController: UIViewController {
         myWorksCollectionView.dataSource = self
         myWorksCollectionView.register(myWorksCell.self, forCellWithReuseIdentifier: "myWorksCell")
     }
-    
-//    private func setupDescriptionLabel() {
-//
-//    }
+
     
     private func setupCollectionView() {
         view.addSubview(myWorksCollectionView)
@@ -78,8 +76,9 @@ class HomeViewController: UIViewController {
         myWorksCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         myWorksCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
-    
 }
+
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -97,5 +96,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
         let width = myWorksCollectionView.frame.width/3 - 1
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         let vc = HomeFullScreenController()
+        vc.selectedIndex = indexPath.row
+        vc.myImageArray = data
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -14,6 +14,7 @@ class myWorksCell: UICollectionViewCell {
         photo.translatesAutoresizingMaskIntoConstraints = false
         photo.contentMode = .scaleAspectFill
         photo.clipsToBounds = true
+        photo.layer.cornerRadius = 10
         return photo
     }()
     

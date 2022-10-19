@@ -24,7 +24,7 @@ class Network {
         var parameters = [String: String]()
         parameters["q"] = "минитату"
         parameters["tbm"] = "isch"
-        parameters["ijn"] = String(0)
+        parameters["ijn"] = "0"
         parameters["api_key"] = "cfe2f667a31ea2deb39a7821c929ed25ad0d2cc730641efd8ba10cc3dc00af8a"
         return parameters
     }
