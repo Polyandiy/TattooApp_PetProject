@@ -35,7 +35,6 @@
 		CEC5B3C328FC15B0001B2D00 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C228FC15B0001B2D00 /* NetworkDataFetcher.swift */; };
 		CEC5B3C528FC1654001B2D00 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C428FC1654001B2D00 /* DataModel.swift */; };
 		CEC5B3C828FC1822001B2D00 /* TattooIdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */; };
-		CEC5B3C928FC1822001B2D00 /* TattooIdeaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5B3C728FC1822001B2D00 /* TattooIdeaCell.xib */; };
 		CEC5B3CC28FD6DF4001B2D00 /* BeforeSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3CA28FD6DF4001B2D00 /* BeforeSessionCell.swift */; };
 		CEC5B3CD28FD6DF4001B2D00 /* BeforeSessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5B3CB28FD6DF4001B2D00 /* BeforeSessionCell.xib */; };
 		CEC5B3D028FD6E08001B2D00 /* AfterSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3CE28FD6E08001B2D00 /* AfterSessionCell.swift */; };
@@ -76,7 +75,6 @@
 		CEC5B3C228FC15B0001B2D00 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		CEC5B3C428FC1654001B2D00 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooIdeaCell.swift; sourceTree = "<group>"; };
-		CEC5B3C728FC1822001B2D00 /* TattooIdeaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TattooIdeaCell.xib; sourceTree = "<group>"; };
 		CEC5B3CA28FD6DF4001B2D00 /* BeforeSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeSessionCell.swift; sourceTree = "<group>"; };
 		CEC5B3CB28FD6DF4001B2D00 /* BeforeSessionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforeSessionCell.xib; sourceTree = "<group>"; };
 		CEC5B3CE28FD6E08001B2D00 /* AfterSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSessionCell.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				CE86521D28F8240A0054CF5E /* StockCell.swift */,
 				CE86521E28F8240A0054CF5E /* StockCell.xib */,
 				CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */,
-				CEC5B3C728FC1822001B2D00 /* TattooIdeaCell.xib */,
 				CEC5B3CA28FD6DF4001B2D00 /* BeforeSessionCell.swift */,
 				CEC5B3CB28FD6DF4001B2D00 /* BeforeSessionCell.xib */,
 				CEC5B3D228FD6E41001B2D00 /* ContraindicationCell.swift */,
@@ -283,7 +280,6 @@
 				CE5F0A9128F68F0B0068DC2D /* Assets.xcassets in Resources */,
 				CEC5B3D128FD6E09001B2D00 /* AfterSessionCell.xib in Resources */,
 				CE86521C28F823F80054CF5E /* PriceCell.xib in Resources */,
-				CEC5B3C928FC1822001B2D00 /* TattooIdeaCell.xib in Resources */,
 				CE5F0A8F28F68F0A0068DC2D /* Main.storyboard in Resources */,
 				CEC5B3CD28FD6DF4001B2D00 /* BeforeSessionCell.xib in Resources */,
 				CE86522028F8240A0054CF5E /* StockCell.xib in Resources */,

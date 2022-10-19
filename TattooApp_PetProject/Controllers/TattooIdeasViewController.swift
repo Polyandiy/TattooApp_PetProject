@@ -15,8 +15,11 @@ class TattooIdeasViewController: UIViewController {
     
     var networkDataFetcher = NetworkDataFether()
     var photos = [Result]()
-    let countCells = 3
-    let offset: CGFloat = 2.0
+    
+    lazy var cacheDataSourse: NSCache<AnyObject, Result> = {
+        let cache = NSCache<AnyObject, Result>()
+        return cache
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +28,9 @@ class TattooIdeasViewController: UIViewController {
         sideMenuBtn.target = self.revealViewController()
         sideMenuBtn.action = #selector(self.revealViewController()?.revealSideMenu)
         
-        collectionView.register(TattooIdeaCell.self, forCellWithReuseIdentifier: "TattooIdeaCell")
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(TattooIdeaCell.self, forCellWithReuseIdentifier: "TattooIdeaCell")
         
         loadImage()
     }
@@ -42,24 +45,42 @@ class TattooIdeasViewController: UIViewController {
     
 }
 
-extension TattooIdeasViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+
+extension TattooIdeasViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TattooIdeaCell", for: indexPath) as! TattooIdeaCell
-        let googlePhoto = photos[indexPath.item]
-        cell.googlePhoto = googlePhoto
-
+        
+        if let image = cacheDataSourse.object(forKey: indexPath.item as AnyObject) {
+            cell.googlePhoto = image
+        } else {
+            let googlePhoto = photos[indexPath.item]
+            cell.googlePhoto = googlePhoto
+//            collectionView.reloadItems(at: [indexPath])
+            self.cacheDataSourse.setObject(googlePhoto, forKey: indexPath.item as AnyObject)
+        }
         return cell
     }
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout
+
+extension TattooIdeasViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let frameVC = collectionView.frame
-        let widthCell = frameVC.width / CGFloat(countCells)
-        let heightCell = widthCell
-        let spacing = CGFloat((countCells)) * offset / CGFloat(countCells)
-        return CGSize(width: widthCell - spacing, height: heightCell - (offset * 2))
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+            return CGSize(width: view.frame.width/3 - 5, height: view.frame.height/4 - 10)
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct APIResponse: Codable {
+class APIResponse: Codable {
     let images_results: [Result]
 }
 
-struct Result: Codable {
+class Result: Codable {
     let position: Int
     let thumbnail: String
 }

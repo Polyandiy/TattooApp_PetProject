@@ -24,7 +24,6 @@ class NetworkDataFether {
     
     func decodeJSON<T: Codable>(type: T.Type, from: Data?) -> T? {
         guard let data = from else { return nil }
-        
         do {
             let items = try JSONDecoder().decode(type.self, from: data)
             return items
