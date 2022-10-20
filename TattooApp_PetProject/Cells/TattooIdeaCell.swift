@@ -13,7 +13,7 @@ class TattooIdeaCell: UICollectionViewCell {
     let photoView: UIImageView = {
         let photo = UIImageView()
         photo.translatesAutoresizingMaskIntoConstraints = false
-        photo.contentMode = .scaleAspectFill
+        photo.contentMode = .scaleAspectFit
         photo.clipsToBounds = true
         photo.layer.cornerRadius = 10
         return photo
@@ -38,10 +38,13 @@ class TattooIdeaCell: UICollectionViewCell {
 //            let photoURL = googlePhoto?.thumbnail
 //            guard let imageURL = photoURL, let url = URL(string: imageURL) else {return}
 //            photoView.sd_setImage(with: url, completed: nil)
-            
-            guard let imageURL = URL(string: googlePhoto.thumbnail) else {return}
+            DispatchQueue.global().async{ [weak self] in
+            guard let imageURL = URL(string: self?.googlePhoto.thumbnail ?? "") else {return}
             guard let data = try? Data(contentsOf: imageURL) else {return}
-                self.photoView.image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    self?.photoView.image = UIImage(data: data)
+                }
+            }
         }
     }
 }

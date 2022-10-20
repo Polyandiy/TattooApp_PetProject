@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class TattooIdeasViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sideMenuBtn: UIBarButtonItem!
     
@@ -39,7 +39,9 @@ class TattooIdeasViewController: UIViewController {
         self.networkDataFetcher.fetchImages { [weak self] (results) in
             guard let fetchPhotos = results else {return}
             self?.photos = fetchPhotos.images_results
-            self?.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
         }
     }
     
@@ -60,7 +62,7 @@ extension TattooIdeasViewController: UICollectionViewDelegate, UICollectionViewD
         } else {
             let googlePhoto = photos[indexPath.item]
             cell.googlePhoto = googlePhoto
-//            collectionView.reloadItems(at: [indexPath])
+            //            collectionView.reloadItems(at: [indexPath])
             self.cacheDataSourse.setObject(googlePhoto, forKey: indexPath.item as AnyObject)
         }
         return cell
@@ -71,10 +73,10 @@ extension TattooIdeasViewController: UICollectionViewDelegate, UICollectionViewD
 
 extension TattooIdeasViewController: UICollectionViewDelegateFlowLayout {
     
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-            return CGSize(width: view.frame.width/3 - 5, height: view.frame.height/4 - 10)
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: view.frame.width/3 - 5, height: view.frame.height/4 - 10)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5

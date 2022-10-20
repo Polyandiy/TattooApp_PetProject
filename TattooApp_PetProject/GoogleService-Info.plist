@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>522515034916-inblbr4826itrh2ub9s2nuu1raht3i9t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.522515034916-inblbr4826itrh2ub9s2nuu1raht3i9t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA_6Y82HubNzhTAJfwsMkz7vQFWbfRzJdg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>522515034916</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SPA.TattooApp-PetProject</string>
+	<key>PROJECT_ID</key>
+	<string>tattooapp-petproject</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tattooapp-petproject.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:522515034916:ios:f4b13054443b369a28b9b1</string>
+</dict>
+</plist>

@@ -42,6 +42,7 @@
 		CEC5B3D428FD6E41001B2D00 /* ContraindicationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B3D228FD6E41001B2D00 /* ContraindicationCell.swift */; };
 		CEC5B3D528FD6E41001B2D00 /* ContraindicationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5B3D328FD6E41001B2D00 /* ContraindicationCell.xib */; };
 		CEF8450128FFE71A00B0CA90 /* HomeFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8450028FFE71A00B0CA90 /* HomeFullScreenController.swift */; };
+		CEF845052901503900B0CA90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF845042901503900B0CA90 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		CEC5B3D228FD6E41001B2D00 /* ContraindicationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContraindicationCell.swift; sourceTree = "<group>"; };
 		CEC5B3D328FD6E41001B2D00 /* ContraindicationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContraindicationCell.xib; sourceTree = "<group>"; };
 		CEF8450028FFE71A00B0CA90 /* HomeFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFullScreenController.swift; sourceTree = "<group>"; };
+		CEF845042901503900B0CA90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF0A8C67DA236E356596E61A /* Pods-TattooApp_PetProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattooApp_PetProject.debug.xcconfig"; path = "Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F14E0655BD8C9D6821EB283F /* Pods-TattooApp_PetProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TattooApp_PetProject.release.xcconfig"; path = "Target Support Files/Pods-TattooApp_PetProject/Pods-TattooApp_PetProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				CE5F0A9028F68F0B0068DC2D /* Assets.xcassets */,
 				CE5F0A9228F68F0B0068DC2D /* LaunchScreen.storyboard */,
 				CE5F0A9528F68F0B0068DC2D /* Info.plist */,
+				CEF845042901503900B0CA90 /* GoogleService-Info.plist */,
 				CE9BDAB428F6D545006338B4 /* Controllers */,
 			);
 			path = TattooApp_PetProject;
@@ -282,6 +285,7 @@
 				CE86521C28F823F80054CF5E /* PriceCell.xib in Resources */,
 				CE5F0A8F28F68F0A0068DC2D /* Main.storyboard in Resources */,
 				CEC5B3CD28FD6DF4001B2D00 /* BeforeSessionCell.xib in Resources */,
+				CEF845052901503900B0CA90 /* GoogleService-Info.plist in Resources */,
 				CE86522028F8240A0054CF5E /* StockCell.xib in Resources */,
 				CE5F0AA628F6912F0068DC2D /* SideMenuCell.xib in Resources */,
 			);
