@@ -19,9 +19,39 @@ class TattooIdeaCell: UICollectionViewCell {
         return photo
     }()
     
+    private let checkmark: UIImageView = {
+        let image = UIImage(systemName: "suit.heart.fill")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.alpha = 0
+        return imageView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupPhotoView()
+        setupCheckmarkView()
+        updateSelectedState()
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            updateSelectedState()
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        photoView.image = nil
+    }
+    
+    private func updateSelectedState() {
+        photoView.alpha = isSelected ? 0.7 : 1
+        checkmark.alpha = isSelected ? 1 : 0
+    }
+    
+    private func setupPhotoView() {
         contentView.addSubview(photoView)
         photoView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         photoView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
@@ -29,8 +59,10 @@ class TattooIdeaCell: UICollectionViewCell {
         photoView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func setupCheckmarkView() {
+        addSubview(checkmark)
+        checkmark.trailingAnchor.constraint(equalTo: photoView.trailingAnchor, constant: -8).isActive = true
+        checkmark.bottomAnchor.constraint(equalTo: photoView.bottomAnchor, constant: -8).isActive = true
     }
     
     var googlePhoto: Result! {
@@ -46,5 +78,9 @@ class TattooIdeaCell: UICollectionViewCell {
                 }
             }
         }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
