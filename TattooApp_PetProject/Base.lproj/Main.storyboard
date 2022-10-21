@@ -668,7 +668,7 @@ Cg
         <!--Settings-->
         <scene sceneID="5UN-HD-I1c">
             <objects>
-                <viewController id="Pir-CT-Vw5" customClass="SettingsViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pir-CT-Vw5" customClass="SignInViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wwd-Sb-rJx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -776,7 +776,7 @@ Cg
                                                 <constraint firstAttribute="height" constant="40" id="8d8-N1-ysq"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
                                     </subviews>
                                     <constraints>

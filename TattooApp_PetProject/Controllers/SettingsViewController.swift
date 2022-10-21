@@ -2,62 +2,39 @@
 //  SettingsViewController.swift
 //  TattooApp_PetProject
 //
-//  Created by Поляндий on 12.10.2022.
+//  Created by Поляндий on 21.10.2022.
 //
 
-import Foundation
 import UIKit
-import FirebaseCore
 import FirebaseAuth
 
-class SettingsViewController: UIViewController, UITextFieldDelegate {
+class SettingsViewController: UIViewController {
     
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet var sideMenuBtn: UIBarButtonItem!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var enterButton: UIButton!
-    
-    @IBOutlet weak var forgottenPasswordLabel: UIButton!
-    
+    lazy private var logOutBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(logOut))
+        button.tintColor = .white
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemPink
         
-        navigationController?.navigationBar.tintColor = .white
-        sideMenuBtn.target = self.revealViewController()
-        sideMenuBtn.action = #selector(self.revealViewController()?.revealSideMenu)
-        
-        loginTextField.delegate = self
-        passwordTextField.delegate = self
-    }
-
-    
-    @IBAction func switchLogin(_ sender: UIButton) {
+        navigationItem.rightBarButtonItem = logOutBarButton
     }
     
-    @IBAction func restorePassword(_ sender: UIButton) {
+    @objc func logOut(){
+        do { try FirebaseAuth.Auth.auth().signOut()
+            self.navigationController?.popViewController(animated: true)
+        } catch {
+            showSignoutAlert()
+        }
     }
     
-    private func showAlert() {
-        let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+    private func showSignoutAlert() {
+        let alert = UIAlertController(title: "Неизвестная ошибка", message: "Попробуйте еще раз", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        let email = loginTextField.text!
-        let pass = passwordTextField.text!
-        
-        if (!email.isEmpty && !pass.isEmpty){
-            Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
-                if error == nil {
-                    print("Выполнен вход")
-                }
-            }
-        } else {
-            showAlert()
-        }
-        
-        return true
-    }
+
 }

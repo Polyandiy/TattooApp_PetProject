@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C76943936A10013583066206 /* Pods_TattooApp_PetProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */; };
+		CE4EC825290292A0000DA1A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */; };
+		CE4EC8272902C411000DA1A5 /* FavouritesTattooIdeaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */; };
+		CE4EC8292902C497000DA1A5 /* FavouritesTattooIdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */; };
 		CE5F0A8828F68F0A0068DC2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0A8728F68F0A0068DC2D /* AppDelegate.swift */; };
 		CE5F0A8A28F68F0A0068DC2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0A8928F68F0A0068DC2D /* SceneDelegate.swift */; };
 		CE5F0A8F28F68F0A0068DC2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5F0A8D28F68F0A0068DC2D /* Main.storyboard */; };
@@ -23,7 +26,7 @@
 		CE5F0AAC28F691FD0068DC2D /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AAB28F691FD0068DC2D /* RecommendationViewController.swift */; };
 		CE5F0AAE28F692170068DC2D /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AAD28F692170068DC2D /* RecordingViewController.swift */; };
 		CE5F0AB028F6923F0068DC2D /* TattooIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AAF28F6923F0068DC2D /* TattooIdeasViewController.swift */; };
-		CE5F0AB228F692710068DC2D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AB128F692710068DC2D /* SettingsViewController.swift */; };
+		CE5F0AB228F692710068DC2D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AB128F692710068DC2D /* SignInViewController.swift */; };
 		CE5F0AB428F6B7120068DC2D /* myWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AB328F6B7120068DC2D /* myWorksCell.swift */; };
 		CE86521828F822200054CF5E /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86521728F822200054CF5E /* PriceModel.swift */; };
 		CE86521B28F823F80054CF5E /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86521928F823F80054CF5E /* PriceCell.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TattooApp_PetProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTattooIdeaController.swift; sourceTree = "<group>"; };
+		CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTattooIdeaCell.swift; sourceTree = "<group>"; };
 		CE5F0A8428F68F0A0068DC2D /* TattooApp_PetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TattooApp_PetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5F0A8728F68F0A0068DC2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5F0A8928F68F0A0068DC2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +70,7 @@
 		CE5F0AAB28F691FD0068DC2D /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		CE5F0AAD28F692170068DC2D /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		CE5F0AAF28F6923F0068DC2D /* TattooIdeasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooIdeasViewController.swift; sourceTree = "<group>"; };
-		CE5F0AB128F692710068DC2D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE5F0AB128F692710068DC2D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE5F0AB328F6B7120068DC2D /* myWorksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWorksCell.swift; sourceTree = "<group>"; };
 		CE86521728F822200054CF5E /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		CE86521928F823F80054CF5E /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 				CEC5B3CB28FD6DF4001B2D00 /* BeforeSessionCell.xib */,
 				CEC5B3D228FD6E41001B2D00 /* ContraindicationCell.swift */,
 				CEC5B3D328FD6E41001B2D00 /* ContraindicationCell.xib */,
+				CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -195,7 +202,9 @@
 				CE5F0AAB28F691FD0068DC2D /* RecommendationViewController.swift */,
 				CE5F0AAD28F692170068DC2D /* RecordingViewController.swift */,
 				CE5F0AAF28F6923F0068DC2D /* TattooIdeasViewController.swift */,
-				CE5F0AB128F692710068DC2D /* SettingsViewController.swift */,
+				CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */,
+				CE5F0AB128F692710068DC2D /* SignInViewController.swift */,
+				CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -354,6 +363,8 @@
 				CE5F0AB428F6B7120068DC2D /* myWorksCell.swift in Sources */,
 				CE5F0AAE28F692170068DC2D /* RecordingViewController.swift in Sources */,
 				CEC5B3D028FD6E08001B2D00 /* AfterSessionCell.swift in Sources */,
+				CE4EC8272902C411000DA1A5 /* FavouritesTattooIdeaController.swift in Sources */,
+				CE4EC8292902C497000DA1A5 /* FavouritesTattooIdeaCell.swift in Sources */,
 				CEC5B3CC28FD6DF4001B2D00 /* BeforeSessionCell.swift in Sources */,
 				CE5F0AB028F6923F0068DC2D /* TattooIdeasViewController.swift in Sources */,
 				CE5F0A8A28F68F0A0068DC2D /* SceneDelegate.swift in Sources */,
@@ -363,7 +374,8 @@
 				CE5F0AAC28F691FD0068DC2D /* RecommendationViewController.swift in Sources */,
 				CEC5B3C128FC1469001B2D00 /* Network.swift in Sources */,
 				CE86521B28F823F80054CF5E /* PriceCell.swift in Sources */,
-				CE5F0AB228F692710068DC2D /* SettingsViewController.swift in Sources */,
+				CE4EC825290292A0000DA1A5 /* SettingsViewController.swift in Sources */,
+				CE5F0AB228F692710068DC2D /* SignInViewController.swift in Sources */,
 				CE86521828F822200054CF5E /* PriceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
