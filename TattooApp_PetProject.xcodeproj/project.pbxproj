@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C76943936A10013583066206 /* Pods_TattooApp_PetProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */; };
+		CE0E1F742903EAE7003A6704 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1F732903EAE7003A6704 /* RecordModel.swift */; };
+		CE0E1F76290403B2003A6704 /* DetailRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1F75290403B2003A6704 /* DetailRecordViewController.swift */; };
 		CE4EC825290292A0000DA1A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */; };
 		CE4EC8272902C411000DA1A5 /* FavouritesTattooIdeaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */; };
 		CE4EC8292902C497000DA1A5 /* FavouritesTattooIdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */; };
@@ -28,7 +30,6 @@
 		CE5F0AB028F6923F0068DC2D /* TattooIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AAF28F6923F0068DC2D /* TattooIdeasViewController.swift */; };
 		CE5F0AB228F692710068DC2D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AB128F692710068DC2D /* SignInViewController.swift */; };
 		CE5F0AB428F6B7120068DC2D /* myWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F0AB328F6B7120068DC2D /* myWorksCell.swift */; };
-		CE86521828F822200054CF5E /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86521728F822200054CF5E /* PriceModel.swift */; };
 		CE86521B28F823F80054CF5E /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86521928F823F80054CF5E /* PriceCell.swift */; };
 		CE86521C28F823F80054CF5E /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE86521A28F823F80054CF5E /* PriceCell.xib */; };
 		CE86521F28F8240A0054CF5E /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86521D28F8240A0054CF5E /* StockCell.swift */; };
@@ -50,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TattooApp_PetProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0E1F732903EAE7003A6704 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		CE0E1F75290403B2003A6704 /* DetailRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordViewController.swift; sourceTree = "<group>"; };
 		CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTattooIdeaController.swift; sourceTree = "<group>"; };
 		CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTattooIdeaCell.swift; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		CE5F0AAF28F6923F0068DC2D /* TattooIdeasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooIdeasViewController.swift; sourceTree = "<group>"; };
 		CE5F0AB128F692710068DC2D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE5F0AB328F6B7120068DC2D /* myWorksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWorksCell.swift; sourceTree = "<group>"; };
-		CE86521728F822200054CF5E /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		CE86521928F823F80054CF5E /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		CE86521A28F823F80054CF5E /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
 		CE86521D28F8240A0054CF5E /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
@@ -114,6 +116,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE0E1F712903E98F003A6704 /* RecommendationsCells */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5B3CE28FD6E08001B2D00 /* AfterSessionCell.swift */,
+				CEC5B3CF28FD6E08001B2D00 /* AfterSessionCell.xib */,
+				CEC5B3CA28FD6DF4001B2D00 /* BeforeSessionCell.swift */,
+				CEC5B3CB28FD6DF4001B2D00 /* BeforeSessionCell.xib */,
+				CEC5B3D228FD6E41001B2D00 /* ContraindicationCell.swift */,
+				CEC5B3D328FD6E41001B2D00 /* ContraindicationCell.xib */,
+			);
+			path = RecommendationsCells;
+			sourceTree = "<group>";
+		};
+		CE0E1F722903E9B1003A6704 /* PriceCells */ = {
+			isa = PBXGroup;
+			children = (
+				CE86521928F823F80054CF5E /* PriceCell.swift */,
+				CE86521A28F823F80054CF5E /* PriceCell.xib */,
+				CE86521D28F8240A0054CF5E /* StockCell.swift */,
+				CE86521E28F8240A0054CF5E /* StockCell.xib */,
+			);
+			path = PriceCells;
+			sourceTree = "<group>";
+		};
 		CE5F0A7B28F68F0A0068DC2D = {
 			isa = PBXGroup;
 			children = (
@@ -139,12 +165,12 @@
 				CE9BDAB328F6D52A006338B4 /* Application */,
 				CE5F0AA228F690C00068DC2D /* Cells */,
 				CE5F0A9D28F6903F0068DC2D /* Models */,
+				CE9BDAB428F6D545006338B4 /* Controllers */,
 				CE5F0A8D28F68F0A0068DC2D /* Main.storyboard */,
 				CE5F0A9028F68F0B0068DC2D /* Assets.xcassets */,
 				CE5F0A9228F68F0B0068DC2D /* LaunchScreen.storyboard */,
 				CE5F0A9528F68F0B0068DC2D /* Info.plist */,
 				CEF845042901503900B0CA90 /* GoogleService-Info.plist */,
-				CE9BDAB428F6D545006338B4 /* Controllers */,
 			);
 			path = TattooApp_PetProject;
 			sourceTree = "<group>";
@@ -154,8 +180,8 @@
 			children = (
 				CE5F0A9E28F690580068DC2D /* SideMenuModel.swift */,
 				CE9BDAB128F6C7A9006338B4 /* myWorksModel.swift */,
-				CE86521728F822200054CF5E /* PriceModel.swift */,
 				CEC5B3C428FC1654001B2D00 /* DataModel.swift */,
+				CE0E1F732903EAE7003A6704 /* RecordModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,19 +190,11 @@
 			isa = PBXGroup;
 			children = (
 				CE5F0AA328F6912F0068DC2D /* SideMenuCell.swift */,
-				CEC5B3CE28FD6E08001B2D00 /* AfterSessionCell.swift */,
-				CEC5B3CF28FD6E08001B2D00 /* AfterSessionCell.xib */,
 				CE5F0AA428F6912F0068DC2D /* SideMenuCell.xib */,
+				CE0E1F712903E98F003A6704 /* RecommendationsCells */,
 				CE5F0AB328F6B7120068DC2D /* myWorksCell.swift */,
-				CE86521928F823F80054CF5E /* PriceCell.swift */,
-				CE86521A28F823F80054CF5E /* PriceCell.xib */,
-				CE86521D28F8240A0054CF5E /* StockCell.swift */,
-				CE86521E28F8240A0054CF5E /* StockCell.xib */,
+				CE0E1F722903E9B1003A6704 /* PriceCells */,
 				CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */,
-				CEC5B3CA28FD6DF4001B2D00 /* BeforeSessionCell.swift */,
-				CEC5B3CB28FD6DF4001B2D00 /* BeforeSessionCell.xib */,
-				CEC5B3D228FD6E41001B2D00 /* ContraindicationCell.swift */,
-				CEC5B3D328FD6E41001B2D00 /* ContraindicationCell.xib */,
 				CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */,
 			);
 			path = Cells;
@@ -201,6 +219,7 @@
 				CE5F0AA928F691DE0068DC2D /* PriceViewController.swift */,
 				CE5F0AAB28F691FD0068DC2D /* RecommendationViewController.swift */,
 				CE5F0AAD28F692170068DC2D /* RecordingViewController.swift */,
+				CE0E1F75290403B2003A6704 /* DetailRecordViewController.swift */,
 				CE5F0AAF28F6923F0068DC2D /* TattooIdeasViewController.swift */,
 				CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */,
 				CE5F0AB128F692710068DC2D /* SignInViewController.swift */,
@@ -353,6 +372,7 @@
 				CE5F0A9C28F68FF20068DC2D /* MainViewController.swift in Sources */,
 				CE9BDAB228F6C7A9006338B4 /* myWorksModel.swift in Sources */,
 				CE5F0A9F28F690580068DC2D /* SideMenuModel.swift in Sources */,
+				CE0E1F742903EAE7003A6704 /* RecordModel.swift in Sources */,
 				CEC5B3C828FC1822001B2D00 /* TattooIdeaCell.swift in Sources */,
 				CE86521F28F8240A0054CF5E /* StockCell.swift in Sources */,
 				CEC5B3D428FD6E41001B2D00 /* ContraindicationCell.swift in Sources */,
@@ -368,6 +388,7 @@
 				CEC5B3CC28FD6DF4001B2D00 /* BeforeSessionCell.swift in Sources */,
 				CE5F0AB028F6923F0068DC2D /* TattooIdeasViewController.swift in Sources */,
 				CE5F0A8A28F68F0A0068DC2D /* SceneDelegate.swift in Sources */,
+				CE0E1F76290403B2003A6704 /* DetailRecordViewController.swift in Sources */,
 				CE5F0AA828F691BA0068DC2D /* HomeViewController.swift in Sources */,
 				CE5F0AA528F6912F0068DC2D /* SideMenuCell.swift in Sources */,
 				CEC5B3C328FC15B0001B2D00 /* NetworkDataFetcher.swift in Sources */,
@@ -376,7 +397,6 @@
 				CE86521B28F823F80054CF5E /* PriceCell.swift in Sources */,
 				CE4EC825290292A0000DA1A5 /* SettingsViewController.swift in Sources */,
 				CE5F0AB228F692710068DC2D /* SignInViewController.swift in Sources */,
-				CE86521828F822200054CF5E /* PriceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

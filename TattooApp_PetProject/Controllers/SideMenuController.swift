@@ -25,12 +25,12 @@ class SideMenuViewController: UIViewController {
     var defaultHighlightedCell: Int = 0
 
     var menu: [SideMenuModel] = [
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "About me"),
-        SideMenuModel(icon: UIImage(systemName: "banknote.fill")!, title: "Price"),
-        SideMenuModel(icon: UIImage(systemName: "hand.raised.slash.fill")!, title: "Recommendation"),
-        SideMenuModel(icon: UIImage(systemName: "pencil.circle.fill")!, title: "Recording"),
-        SideMenuModel(icon: UIImage(systemName: "lightbulb.fill")!, title: "Tatoo Ideas"),
-        SideMenuModel(icon: UIImage(systemName: "lock.fill")!, title: "Settings"),
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Обо мне"),
+        SideMenuModel(icon: UIImage(systemName: "banknote.fill")!, title: "Прайс"),
+        SideMenuModel(icon: UIImage(systemName: "hand.raised.slash.fill")!, title: "Рекомендации"),
+        SideMenuModel(icon: UIImage(systemName: "pencil.circle.fill")!, title: "Запись на сеанс"),
+        SideMenuModel(icon: UIImage(systemName: "lightbulb.fill")!, title: "Идеи тату"),
+        SideMenuModel(icon: UIImage(systemName: "lock.fill")!, title: "Настройки"),
         SideMenuModel(icon: UIImage(systemName: "ipodshuffle.gen4")!, title: "Instagram")
     ]
 

@@ -21,11 +21,5 @@ class PriceCell: UITableViewCell {
         self.nameOfServiceLabel.textColor = .white
         self.priceLabel.textColor = .white
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
     
 }

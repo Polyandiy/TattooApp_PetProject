@@ -628,14 +628,71 @@ Cg
                     <view key="view" contentMode="scaleToFill" id="79h-EC-vkd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eck-sY-BeZ">
+                                <rect key="frame" x="0.0" y="730" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Записаться" width="416.5" style="done" id="3D3-Cb-Ikz">
+                                        <color key="tintColor" red="0.73725490199999999" green="0.1333333333" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="recordingLabel:" destination="Y0j-eM-2ea" id="2ZL-X1-dHC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <toolbarAppearance key="standardAppearance" backgroundEffect="systemThickMaterial"/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drm-33-SIa">
+                                <rect key="frame" x="20" y="20" width="243" height="43"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Ваши">
+                                        <attributes>
+                                            <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Optima-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="записи">
+                                        <attributes>
+                                            <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=":">
+                                        <attributes>
+                                            <color key="NSColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="Optima-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="o91-qT-ziW"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="drm-33-SIa" firstAttribute="leading" secondItem="79h-EC-vkd" secondAttribute="leadingMargin" id="2Gn-6H-sNq"/>
+                            <constraint firstItem="drm-33-SIa" firstAttribute="top" secondItem="o91-qT-ziW" secondAttribute="top" constant="20" id="9yp-Oe-koa"/>
+                            <constraint firstItem="o91-qT-ziW" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="drm-33-SIa" secondAttribute="trailing" symbolic="YES" id="dIY-aX-5Hb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recording" id="R09-Bd-7jQ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="list.bullet" catalog="system" id="jWp-ZJ-RZ5"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="recordLabel" destination="3D3-Cb-Ikz" id="caO-83-Pt0"/>
                         <outlet property="sideMenuBtn" destination="jWp-ZJ-RZ5" id="Cdr-Xi-1D0"/>
+                        <outlet property="titleLabel" destination="drm-33-SIa" id="u47-Lr-bnh"/>
+                        <outlet property="toolBar" destination="eck-sY-BeZ" id="cak-9K-BZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFf-wo-saA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -55,7 +55,6 @@ class FavouritesTattooIdeaController: UICollectionViewController {
         enterSearchTermLabel.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: 50).isActive = true
     }
     
-    
     // MARK: - UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
