@@ -7,12 +7,12 @@
 
 import UIKit
 
-class DetailRecordViewController: UIViewController {
+class DetailRecordViewController: UIViewController, UITextFieldDelegate {
     
-    var nameClient: String = ""
-    var phoneClient: String = ""
-    var time: String = ""
-    var date = Date()
+    var nameClient: String?
+    var phoneClient: String?
+    var time: String?
+    var date: Date?
     
     let nameTextField: UITextField = {
         let tf = UITextField()
@@ -62,10 +62,8 @@ class DetailRecordViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = saveButton
         view.backgroundColor = .systemPink
-        
-        nameTextField.text = nameClient
-        phoneTextField.text = phoneClient
-        datePicker.date = date.self
+        nameTextField.delegate = self
+        phoneTextField.delegate = self
         
         setupElements()
     }
@@ -119,8 +117,8 @@ class DetailRecordViewController: UIViewController {
         guard let nameTF = nameTextField.text, let phoneTF = phoneTextField.text else { return }
         self.nameClient = nameTF
         self.phoneClient = phoneTF
-        date.self = datePicker.date
-        
+        self.date = datePicker.date
+
         if !nameTextField.hasText && !phoneTextField.hasText {
             let alert = UIAlertController(title: "Пожалйуста, заполните все поля", message: nil, preferredStyle: .alert)
             let ok = UIAlertAction(title: "ОК", style: .default, handler: nil)
@@ -128,9 +126,22 @@ class DetailRecordViewController: UIViewController {
             present(alert, animated: true)
         }
         
-        let record = RecordModel(nameClient: nameClient, numberPhone: phoneClient, date: date, time: time)
+        if nameClient == nil {
+            print("Пустое имя")
+        } else if phoneClient == nil {
+            print("Нет номера телефона")
+        } else if time == nil {
+            print("Не определяется время")
+        } else if date == nil {
+            print("Не определяется дата")
+        } else {
+            print("Нет пустых параметров")
+        }
+
+        let record = RecordModel(nameClient: nameClient!, numberPhone: phoneClient!, date: date!, time: time!)
         let recVC = RecordingViewController()
         recVC.records.append(record)
+        
         DispatchQueue.main.async {
             recVC.tableView.reloadData()
         }

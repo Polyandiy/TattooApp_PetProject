@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="-475.36231884057975" y="221.65178571428569"/>
         </scene>
-        <!--Home-->
+        <!--Обо мне-->
         <scene sceneID="EUL-5a-x18">
             <objects>
                 <viewController id="Ugy-Ko-Ft6" customClass="HomeViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -388,7 +388,7 @@ Cg
                             <constraint firstItem="s4T-3B-dzB" firstAttribute="trailing" secondItem="J4Z-Sc-2lW" secondAttribute="trailing" constant="20" id="yop-0F-NxH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="fgm-Uf-Kon">
+                    <navigationItem key="navigationItem" title="Обо мне" id="fgm-Uf-Kon">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="S9J-UU-OKA"/>
                     </navigationItem>
                     <connections>
@@ -424,7 +424,7 @@ Cg
             </objects>
             <point key="canvasLocation" x="-2043" y="929"/>
         </scene>
-        <!--Tattoo Ideas-->
+        <!--Идеи мини-тату-->
         <scene sceneID="Xri-Hn-1m1">
             <objects>
                 <viewController id="Arh-nn-BJ6" customClass="TattooIdeasViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -457,7 +457,7 @@ Cg
                         <viewLayoutGuide key="safeArea" id="Zge-I0-m7e"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tattoo Ideas" id="KQO-E0-5bQ">
+                    <navigationItem key="navigationItem" title="Идеи мини-тату" id="KQO-E0-5bQ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="list.bullet" catalog="system" id="3fF-LG-Joh"/>
                     </navigationItem>
                     <connections>
@@ -492,7 +492,7 @@ Cg
             </objects>
             <point key="canvasLocation" x="-1280" y="929"/>
         </scene>
-        <!--Price-->
+        <!--Прайс-->
         <scene sceneID="ON9-yg-cPv">
             <objects>
                 <viewController id="YZ9-XK-sgF" customClass="PriceViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -532,7 +532,7 @@ Cg
                             <constraint firstItem="KsS-iI-Rnz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aGF-I4-wVp" secondAttribute="trailing" id="iNf-Rk-7DK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Price" id="frT-27-RbZ">
+                    <navigationItem key="navigationItem" title="Прайс" id="frT-27-RbZ">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="o7Y-Ue-FaI"/>
                     </navigationItem>
                     <connections>
@@ -568,7 +568,7 @@ Cg
             </objects>
             <point key="canvasLocation" x="-481" y="929"/>
         </scene>
-        <!--Recommendations-->
+        <!--Рекомендации-->
         <scene sceneID="IFA-cK-Txs">
             <objects>
                 <viewController id="FWO-yd-Btf" customClass="RecommendationViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -608,7 +608,7 @@ Cg
                             <constraint firstItem="ezH-MS-fIg" firstAttribute="bottom" secondItem="8cm-9H-rul" secondAttribute="bottom" constant="20" id="wDl-BZ-Gd4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Recommendations" id="dc5-3I-4ef">
+                    <navigationItem key="navigationItem" title="Рекомендации" id="dc5-3I-4ef">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="8Jv-w8-gjQ"/>
                     </navigationItem>
                     <connections>
@@ -621,7 +621,7 @@ Cg
             </objects>
             <point key="canvasLocation" x="-481.15942028985512" y="1674.7767857142856"/>
         </scene>
-        <!--Recording-->
+        <!--Запись на сеанс-->
         <scene sceneID="OA4-yd-L7G">
             <objects>
                 <viewController id="Y0j-eM-2ea" customClass="RecordingViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -698,7 +698,7 @@ Cg
                             <constraint firstItem="o91-qT-ziW" firstAttribute="trailing" secondItem="p8P-0u-omR" secondAttribute="trailing" constant="20" id="zpG-BZ-2Q1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Recording" id="R09-Bd-7jQ">
+                    <navigationItem key="navigationItem" title="Запись на сеанс" id="R09-Bd-7jQ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="list.bullet" catalog="system" id="jWp-ZJ-RZ5"/>
                     </navigationItem>
                     <connections>
@@ -736,7 +736,7 @@ Cg
             </objects>
             <point key="canvasLocation" x="1872" y="929"/>
         </scene>
-        <!--Settings-->
+        <!--Настройки-->
         <scene sceneID="5UN-HD-I1c">
             <objects>
                 <viewController id="Pir-CT-Vw5" customClass="SignInViewController" customModule="TattooApp_PetProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -878,7 +878,7 @@ Cg
                         <viewLayoutGuide key="safeArea" id="r0e-L9-1CQ"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="bu3-Qd-HZX">
+                    <navigationItem key="navigationItem" title="Настройки" id="bu3-Qd-HZX">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="Vhe-Vs-Yml"/>
                     </navigationItem>
                     <connections>

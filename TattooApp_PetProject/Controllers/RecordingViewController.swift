@@ -54,8 +54,8 @@ class RecordingViewController: UIViewController {
         sideMenuBtn.action = #selector(self.revealViewController()?.revealSideMenu)
         
         loadRecords()
-//        setupTableView()
-//        setupEnterLabel()
+        setupTableView()
+        setupEnterLabel()
     }
     
     @IBAction func recordingLabel(_ sender: UIBarButtonItem) {
@@ -72,21 +72,21 @@ class RecordingViewController: UIViewController {
     
     //MARK: - setup UI Elements
     
-//    private func setupEnterLabel() {
-//        view.addSubview(enterLabel)
-//        enterLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
-//        enterLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-//        enterLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
-//    }
-//
-//    private func setupTableView() {
-//        if records.isEmpty {
-//            tableView.isHidden = true
-//        } else {
-//            tableView.isHidden = false
-//            enterLabel.isHidden = true
-//        }
-//    }
+    private func setupEnterLabel() {
+        view.addSubview(enterLabel)
+        enterLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
+        enterLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        enterLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
+    }
+
+    private func setupTableView() {
+        if records.isEmpty {
+            tableView.isHidden = true
+        } else {
+            tableView.isHidden = false
+            enterLabel.isHidden = true
+        }
+    }
 }
 
 //MARK: - UITableViewDelegate, UITableViewDataSource
@@ -101,8 +101,8 @@ extension RecordingViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordCell
         let dateFormatter = DateFormatter()
 
-        cell.timeLabel.text = records[indexPath.row].time
-        cell.dateLabel.text = dateFormatter.string(from: records[indexPath.row].date)
+        cell.timeLabel?.text = records[indexPath.row].time
+        cell.dateLabel?.text = dateFormatter.string(from: records[indexPath.row].date)
         
         return cell
     }

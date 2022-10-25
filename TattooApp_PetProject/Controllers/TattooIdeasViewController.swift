@@ -115,10 +115,11 @@ class TattooIdeasViewController: UIViewController {
         
         let alertController = UIAlertController(title: "", message: "\(selectedPhotos!.count) фото будут добавлены в альбом", preferredStyle: .alert)
         let add = UIAlertAction(title: "Добавить", style: .default) { (action) in
-            let favVC = FavouritesTattooIdeaController()
-    
-            favVC.photos.append(contentsOf: selectedPhotos ?? [])
+            
+            let favVC = FavouritesTattooIdeaController(collectionViewLayout: UICollectionViewFlowLayout())
+            favVC.photos.append(contentsOf: selectedPhotos!)
             favVC.collectionView.reloadData()
+            print(favVC.photos.count)
             
             self.refresh()
         }
@@ -134,8 +135,8 @@ class TattooIdeasViewController: UIViewController {
     }
     
     @objc private func showFavVC() {
-        let favVC = FavouritesTattooIdeaController(collectionViewLayout: UICollectionViewFlowLayout())
-        self.navigationController?.pushViewController(favVC, animated: true)
+        let favouriteVC = FavouritesTattooIdeaController(collectionViewLayout: UICollectionViewFlowLayout())
+        self.navigationController?.pushViewController(favouriteVC, animated: true)
     }
 }
 
