@@ -8,7 +8,12 @@
 import UIKit
 
 class DetailRecordViewController: UIViewController {
-
+    
+    var nameClient: String = ""
+    var phoneClient: String = ""
+    var time: String = ""
+    var date = Date()
+    
     let nameTextField: UITextField = {
         let tf = UITextField()
         tf.backgroundColor = .white
@@ -29,6 +34,7 @@ class DetailRecordViewController: UIViewController {
     
     let datePicker: UIDatePicker = {
         let picker = UIDatePicker()
+        picker.datePickerMode = .date
         picker.backgroundColor = .white
         picker.translatesAutoresizingMaskIntoConstraints = false
         picker.layer.cornerRadius = 10
@@ -36,14 +42,11 @@ class DetailRecordViewController: UIViewController {
     }()
     
     let timeSegment: UISegmentedControl = {
-        let segment = UISegmentedControl()
+        let items = ["12:00", "14:00", "16:00", "18:00"]
+        let segment = UISegmentedControl(items: items)
         segment.backgroundColor = .white
-//        segment.numberOfSegments =
-//        segment.titleForSegment(at: 0) = "12:00"
-//        segment.titleForSegment(at: 1) = "15:00"
-//        segment.titleForSegment(at: 2) = "16:00"
-//        segment.titleForSegment(at: 3) = "18:00"
         segment.translatesAutoresizingMaskIntoConstraints = false
+        segment.addTarget(self, action: #selector(selectValue), for: .valueChanged)
         return segment
     }()
     
@@ -53,14 +56,21 @@ class DetailRecordViewController: UIViewController {
         return button
     }()
     
-    
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.rightBarButtonItem = saveButton
         view.backgroundColor = .systemPink
+        
+        nameTextField.text = nameClient
+        phoneTextField.text = phoneClient
+        datePicker.date = date.self
+        
         setupElements()
     }
+    
+    //MARK: - setup UI Elements
     
     private func setupElements() {
         view.addSubview(nameTextField)
@@ -88,8 +98,42 @@ class DetailRecordViewController: UIViewController {
         timeSegment.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
-    @objc private func saveRecord() {
-        print("сохранено")
+    @objc func selectValue() {
+        let index = timeSegment.selectedSegmentIndex
+        switch index {
+        case 0:
+            return self.time = "12:00"
+        case 1:
+            return self.time = "14:00"
+        case 2:
+            return self.time = "16:00"
+        case 3:
+            return self.time = "18:00"
+        default:
+            break
+        }
     }
     
+    @objc private func saveRecord() {
+        
+        guard let nameTF = nameTextField.text, let phoneTF = phoneTextField.text else { return }
+        self.nameClient = nameTF
+        self.phoneClient = phoneTF
+        date.self = datePicker.date
+        
+        if !nameTextField.hasText && !phoneTextField.hasText {
+            let alert = UIAlertController(title: "Пожалйуста, заполните все поля", message: nil, preferredStyle: .alert)
+            let ok = UIAlertAction(title: "ОК", style: .default, handler: nil)
+            alert.addAction(ok)
+            present(alert, animated: true)
+        }
+        
+        let record = RecordModel(nameClient: nameClient, numberPhone: phoneClient, date: date, time: time)
+        let recVC = RecordingViewController()
+        recVC.records.append(record)
+        DispatchQueue.main.async {
+            recVC.tableView.reloadData()
+        }
+        navigationController?.popViewController(animated: true)
+    }
 }

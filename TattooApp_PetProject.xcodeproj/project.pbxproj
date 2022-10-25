@@ -10,6 +10,9 @@
 		C76943936A10013583066206 /* Pods_TattooApp_PetProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */; };
 		CE0E1F742903EAE7003A6704 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1F732903EAE7003A6704 /* RecordModel.swift */; };
 		CE0E1F76290403B2003A6704 /* DetailRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1F75290403B2003A6704 /* DetailRecordViewController.swift */; };
+		CE0E1F782907A384003A6704 /* RecordStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1F772907A384003A6704 /* RecordStorage.swift */; };
+		CE0E1F7B2907C6E0003A6704 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1F792907C6E0003A6704 /* RecordCell.swift */; };
+		CE0E1F7C2907C6E0003A6704 /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0E1F7A2907C6E0003A6704 /* RecordCell.xib */; };
 		CE4EC825290292A0000DA1A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */; };
 		CE4EC8272902C411000DA1A5 /* FavouritesTattooIdeaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */; };
 		CE4EC8292902C497000DA1A5 /* FavouritesTattooIdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */; };
@@ -53,6 +56,9 @@
 		4523D878FF2973B9299C4D49 /* Pods_TattooApp_PetProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TattooApp_PetProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0E1F732903EAE7003A6704 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		CE0E1F75290403B2003A6704 /* DetailRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordViewController.swift; sourceTree = "<group>"; };
+		CE0E1F772907A384003A6704 /* RecordStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStorage.swift; sourceTree = "<group>"; };
+		CE0E1F792907C6E0003A6704 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		CE0E1F7A2907C6E0003A6704 /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		CE4EC824290292A0000DA1A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CE4EC8262902C411000DA1A5 /* FavouritesTattooIdeaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTattooIdeaController.swift; sourceTree = "<group>"; };
 		CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTattooIdeaCell.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				CE9BDAB128F6C7A9006338B4 /* myWorksModel.swift */,
 				CEC5B3C428FC1654001B2D00 /* DataModel.swift */,
 				CE0E1F732903EAE7003A6704 /* RecordModel.swift */,
+				CE0E1F772907A384003A6704 /* RecordStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 				CE0E1F722903E9B1003A6704 /* PriceCells */,
 				CEC5B3C628FC1822001B2D00 /* TattooIdeaCell.swift */,
 				CE4EC8282902C497000DA1A5 /* FavouritesTattooIdeaCell.swift */,
+				CE0E1F792907C6E0003A6704 /* RecordCell.swift */,
+				CE0E1F7A2907C6E0003A6704 /* RecordCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -314,6 +323,7 @@
 				CE5F0A8F28F68F0A0068DC2D /* Main.storyboard in Resources */,
 				CEC5B3CD28FD6DF4001B2D00 /* BeforeSessionCell.xib in Resources */,
 				CEF845052901503900B0CA90 /* GoogleService-Info.plist in Resources */,
+				CE0E1F7C2907C6E0003A6704 /* RecordCell.xib in Resources */,
 				CE86522028F8240A0054CF5E /* StockCell.xib in Resources */,
 				CE5F0AA628F6912F0068DC2D /* SideMenuCell.xib in Resources */,
 			);
@@ -370,8 +380,10 @@
 			files = (
 				CE5F0AA128F690AA0068DC2D /* SideMenuController.swift in Sources */,
 				CE5F0A9C28F68FF20068DC2D /* MainViewController.swift in Sources */,
+				CE0E1F782907A384003A6704 /* RecordStorage.swift in Sources */,
 				CE9BDAB228F6C7A9006338B4 /* myWorksModel.swift in Sources */,
 				CE5F0A9F28F690580068DC2D /* SideMenuModel.swift in Sources */,
+				CE0E1F7B2907C6E0003A6704 /* RecordCell.swift in Sources */,
 				CE0E1F742903EAE7003A6704 /* RecordModel.swift in Sources */,
 				CEC5B3C828FC1822001B2D00 /* TattooIdeaCell.swift in Sources */,
 				CE86521F28F8240A0054CF5E /* StockCell.swift in Sources */,
@@ -552,6 +564,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,6 +594,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

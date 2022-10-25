@@ -7,14 +7,16 @@
 
 import Foundation
 
-enum RecordStatus {
-    case free
-    case engaged
+protocol RecordProtocol {
+    var nameClient: String { get set }
+    var numberPhone: String { get set }
+    var date: Date { get set }
+    var time: String { get set }
 }
 
-struct RecordModel {
+struct RecordModel: RecordProtocol {
     var nameClient: String
     var numberPhone: String
     var date: Date
-    var status: RecordStatus
+    var time: String
 }

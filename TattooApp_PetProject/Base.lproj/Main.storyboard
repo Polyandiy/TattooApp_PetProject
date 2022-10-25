@@ -629,9 +629,11 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eck-sY-BeZ">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eck-sY-BeZ">
                                 <rect key="frame" x="0.0" y="730" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xag-ho-4F9"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Записаться" width="416.5" style="done" id="3D3-Cb-Ikz">
                                         <color key="tintColor" red="0.73725490199999999" green="0.1333333333" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -676,13 +678,24 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p8P-0u-omR">
+                                <rect key="frame" x="20" y="98" width="374" height="632"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o91-qT-ziW"/>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="drm-33-SIa" firstAttribute="leading" secondItem="79h-EC-vkd" secondAttribute="leadingMargin" id="2Gn-6H-sNq"/>
+                            <constraint firstItem="eck-sY-BeZ" firstAttribute="bottom" secondItem="o91-qT-ziW" secondAttribute="bottom" id="7M6-fj-K7R"/>
                             <constraint firstItem="drm-33-SIa" firstAttribute="top" secondItem="o91-qT-ziW" secondAttribute="top" constant="20" id="9yp-Oe-koa"/>
+                            <constraint firstItem="eck-sY-BeZ" firstAttribute="centerX" secondItem="p8P-0u-omR" secondAttribute="centerX" id="NST-et-uSq"/>
+                            <constraint firstItem="p8P-0u-omR" firstAttribute="leading" secondItem="o91-qT-ziW" secondAttribute="leading" constant="20" id="XfJ-Qv-JDX"/>
+                            <constraint firstItem="eck-sY-BeZ" firstAttribute="leading" secondItem="79h-EC-vkd" secondAttribute="leading" id="awd-xX-Xjo"/>
                             <constraint firstItem="o91-qT-ziW" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="drm-33-SIa" secondAttribute="trailing" symbolic="YES" id="dIY-aX-5Hb"/>
+                            <constraint firstItem="p8P-0u-omR" firstAttribute="top" secondItem="drm-33-SIa" secondAttribute="bottom" constant="35" id="gIW-cL-On1"/>
+                            <constraint firstItem="eck-sY-BeZ" firstAttribute="top" secondItem="p8P-0u-omR" secondAttribute="bottom" id="qPz-yt-TOg"/>
+                            <constraint firstItem="o91-qT-ziW" firstAttribute="trailing" secondItem="p8P-0u-omR" secondAttribute="trailing" constant="20" id="zpG-BZ-2Q1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recording" id="R09-Bd-7jQ">
@@ -691,6 +704,7 @@ Cg
                     <connections>
                         <outlet property="recordLabel" destination="3D3-Cb-Ikz" id="caO-83-Pt0"/>
                         <outlet property="sideMenuBtn" destination="jWp-ZJ-RZ5" id="Cdr-Xi-1D0"/>
+                        <outlet property="tableView" destination="p8P-0u-omR" id="liB-Bx-Nh1"/>
                         <outlet property="titleLabel" destination="drm-33-SIa" id="u47-Lr-bnh"/>
                         <outlet property="toolBar" destination="eck-sY-BeZ" id="cak-9K-BZ2"/>
                     </connections>
